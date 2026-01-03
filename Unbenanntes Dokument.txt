@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium E-Commerce System</title>
+  <meta name="description" content="Professionelle Dropshipping- und E-Commerce-Lösungen von Mahmood Abdulsattar. High-End Branding, Marketing & Conversion-Optimierung.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: #ffffff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14,14,14,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  transition: 0.5s ease;
+}
+nav .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #d4af37;
+}
+nav .creator {
+  font-size: 0.9rem;
+  color: #cccccc;
+  opacity: 0;
+  animation: fadeInCreator 1.5s forwards;
+}
+nav a { margin-left: 25px; color: #ccc; font-weight: 500; transition: 0.3s ease; }
+nav a:hover { color: #fff; transform: scale(1.05); }
+
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #0e0e0e 0%, #141414 100%);
+  position: relative;
+  overflow: hidden;
+}
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: slideInTop 1s ease forwards;
+  opacity: 0;
+}
+header p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #d4af37, #f5d76e);
+  color: #000;
+  font-weight: 600;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+.btn:hover { transform: scale(1.1); }
+
+
+section {
+  padding: 100px 10%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+
+.trust, .services, .process, .stats, .testimonial, .blog-posts {
+  display: grid;
+  gap: 30px;
+}
+.trust { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); text-align: center; }
+.trust div, .card, .process div, .stats div, .testimonial div, .blog-posts div {
+  background: #151515;
+  padding: 35px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.trust div:hover, .card:hover, .process div:hover, .stats div:hover, .testimonial div:hover, .blog-posts div:hover { transform: translateY(-10px); box-shadow: 0 0 35px rgba(212,175,55,0.5); }
+
+
+.services { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.process { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); text-align: center; }
+.stats { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; }
+.testimonial { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.blog-posts { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+
+footer {
+  background: #0a0a0a;
+  padding: 50px 10%;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+@keyframes slideInTop { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInCreator { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+
+
+@media(max-width: 768px) {
+  header h1 { font-size: 2.5rem; }
+  section { padding: 80px 5%; }
+  nav a { margin-left: 15px; }
+}
+
+
+  </style>
+</head>
+<body><nav>
+  <div class="logo-container">
+    <div class="logo">M</div>
+    <div class="creator">Created by Mahmood</div>
+  </div>
+  <div>
+    <a href="#services">Leistungen</a>
+    <a href="#about">Überblick</a>
+    <a href="#contact">Kontakt</a>
+  </div>
+</nav><header>
+  <div>
+    <h1>Skalierbare E-Commerce Systeme</h1>
+    <p>Premium Dropshipping-Strukturen mit Branding, Conversion und nachhaltigem Wachstum.</p>
+    <a href="#contact" class="btn">Projekt anfragen</a>
+    <a href="#services" class="btn">Mehr erfahren</a>
+  </div>
+</header><!-- Sections bleiben unverändert --><script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('section').forEach(el => observer.observe(el));
+
+
+  // Header Animation
+  window.addEventListener('load', () => {
+    document.querySelector('header h1').style.opacity = 1;
+    document.querySelector('header h1').style.transform = 'translateY(0)';
+    document.querySelector('header p').style.opacity = 1;
+    document.querySelector('.creator').style.opacity = 1;
+  });
+</script></body>
+</html>
